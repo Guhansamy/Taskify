@@ -1,5 +1,6 @@
-import Addtask from "./Addtask"
 import "../assets/deepak.css"
+import { CreateForm } from "./CreateForm"
+import { TaskList } from "./TaskList"
 
 const Taskspage=()=>{
     return (
@@ -21,23 +22,8 @@ const Taskspage=()=>{
                 </div>
             </div>
 
-              <div className="rightside">
-                
-                <div className="titlecard">
-                    <h1 style={{"position":"absolute","marginLeft":"60px","marginTop":"60px"}}> Discrete Mathematics</h1>
-                    <img style={{"position":"absolute","width":"290px","marginLeft":"600px"}} src="./src/assets/book1.png"></img>
-                </div>
-                
-                <div className="tasklist">
-                    <Addtask/>
-                    <Addtask/>
-                    <Addtask/>
-                    <Addtask/>
-                    <Addtask/>
-                    <Addtask/>
-                    <Addtask/>
-                </div>
-            </div>
+              {/* <TaskList/> */}
+              <CreateForm/>
         </div>
         </>
     )

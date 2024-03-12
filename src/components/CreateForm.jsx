@@ -1,21 +1,30 @@
+import { useState } from "react"
 
 
 export const CreateForm = ()=>{
+    const form = new FormData()
+    const [title,setTitle] = useState("")
+    const [description,setDescription] = useState("")
+    const Handle =(fils)=>{
+        console.log(fils[0])
+        form.append('file',fils[0])
+    }
+    const submitHandle = async()=>{
+        form.append('title',title)
+        form.append('desc',description)
+        const response = await fetch('http://localhost:8000/api-upload',{
+            method : 'POST',
+            body : form
+        })
+        const data = await response.json()
+        console.log(data)
+    }
     const style = {
-        container:{
-            display:'flex',
-            height:'100%'
-        },
-        leftContainer:{
-            width:"25%",
-            borderRight:'1px solid black',
-            padding:'9% 0px',
-            height:'100%'
-        },
         rightContainer:{
             width:'75%',
             height:'100%',
-            padding:'0% 0px'
+            padding:'0% 0px',
+            marginLeft:'20%'
         },
         profileContainer:{
             height:'175px',
@@ -23,19 +32,23 @@ export const CreateForm = ()=>{
             border:'2px solid black',
             borderRadius:'50%',
             background:'red',
-            margin:'10% auto'
+            margin:'15% auto'
         },
         inpContainer:{
             display:'flex',
-            flexDirection:'column'   
+            flexDirection:'column' ,
+            margin:'5% 15%',
+            // border:'1px solid black'  ,
+            // paddingBo
         },
         btn:{
             border:'1px solid grey',
-            borderRadius:'15%',
-            padding:'5px 25px',
-            margin:'0px 25px',
-            background:'green',
-            color:'white'
+            alignSelf:'flex-end',
+            borderRadius:'20px',
+            padding:'0px 15px',
+            margin:'0px 0px',
+            background:'rgb(80, 194, 163)',
+            
         },
         inp:{
             height:'45px',
@@ -48,8 +61,8 @@ export const CreateForm = ()=>{
         txtInp:{
             height:'125px',
             width:'300px',
-            border:'0px',
-            borderBottom:'2px solid silver',
+            // border:'0px',
+            // borderBottom:'2px solid silver',
             fontSize:'20px',
             padding:'5px'
         },
@@ -57,39 +70,33 @@ export const CreateForm = ()=>{
             height:'45px',
             width:'300px',
             border:'0px',
+            padding:'7%'
         }
     }
     return (
-        <div style={style.container}>
-            <div style={style.leftContainer}>
-                <div style={style.profileContainer}>
-
-                </div>
-                <h2 style={{textAlign:"center",margin:'0px 75px', borderBottom:'1px solid silver'}}>Deepak</h2>                
-            </div>
-
-            <div style={style.rightContainer}>
+        <div style={style.rightContainer}>
                 <div style={style.inpContainer}>
                     <table className="inp-table">
                         <tr>
                             <td> <h1>Title</h1></td>
-                            <td><input style={style.inp} type="text" id="title" /></td>
+                            <td><input onChange={(e)=>setTitle(e.target.value)} style={style.inp} type="text" id="title" /></td>
                         </tr>
                         <tr>
                             <td><h1>Description</h1></td>
-                            <td><textarea style={style.txtInp} name="" id="" cols="30" rows="10"></textarea></td>
+                            <td><textarea style={style.txtInp} onChange={e=>setDescription(e.target.value)} name="desc" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
                             <td><h1>Upload Files</h1></td>
-                            <td><input style={style.fileInp} type="file" name="" id="" /></td>
+                            <td><input name="file" onChange={e=>{Handle(e.target.files)}} style={style.fileInp} type="file" id="" /></td>
                         </tr>
                     </table>
-                    <div style={{alignSelf:'flex-end'}}>
-                        <a href=""><h1 style={style.btn}>Submit</h1></a>
+                    <div style={style.btn}>
+                        <button onClick={e=>submitHandle()} style={{background:'inherit',border:'0px'}}><h2 style={{color:'white'}}>Submit</h2></button>
                         
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
+
+
