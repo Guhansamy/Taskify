@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import './dharun.css'
+import './assets/dharun.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
