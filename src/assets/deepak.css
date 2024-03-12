@@ -27,6 +27,7 @@
     background-color: white;
     width: 310px;
     border-right: 1px solid ;
+    margin-top: 5.3%;
   }
   
   .top-sidepage{
@@ -68,10 +69,11 @@
     flex-direction: column;
     padding-left: 60px;
     margin-left: 300px;
+    margin-top: 4%;
   }
   
   .titlecard{
-    position: relative;
+    /* position: relative; */
     margin-top: 40px;
     border-radius: 2px solid black;
     background-color: rgb(80, 194, 163);
