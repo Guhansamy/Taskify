@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Body from './components/Body'
 import {CreateForm} from './components/CreateForm'
 import Taskspage from './components/Taskspage'
+import NewUser from './components/NewUser'
 
 function App() {
 
@@ -10,10 +11,15 @@ function App() {
     <>
       <Header />
       {/* <Body/> */}
-      <CreateForm/>
+      {/* <CreateForm/> */}
       {/* <Taskspage/> */}
+      <NewUser />
     </>
   )
 }
 
 export default App
+
+
+
+
