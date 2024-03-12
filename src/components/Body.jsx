@@ -7,10 +7,19 @@ const Body = () => {
 
                 <div className="body-first"> 
                     <div className="body-name">
-                        Hey Deepa you have 15 task remaining
+                        Hey Deepa you have <span> 15 </span> task remaining
                     </div>
                     <div>
                         <button className="body-join-button" > Join Task</button>
+                    </div>
+                </div>
+
+                <div className="body-middle">
+                    <div>
+                        <button className="my-task-btn"> My Task</button>
+                    </div>
+                    <div>
+                        <button className="create-task-btn"> Created Task </button>
                     </div>
                 </div>
 

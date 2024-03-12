@@ -62,7 +62,8 @@
 }
 
 .body-join-button {
-    background-color: #e8cdb3;
+    /* background-color: #e8cdb3; */
+    background-color: rgb(80, 194, 163);
     border-radius: 10px;
     font-size: 1.2rem;
     height: 30px;
@@ -70,11 +71,34 @@
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 3px 3px 3px;
+    color: aliceblue   ;
 }
 
 .body-join-button:hover{
     height: 33px;
+    color: rgb(237, 248, 174);
     /* background: linear-gradient(to left, red, #45FFCA); */
+}
+
+.body-middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    height: 40px;
+}
+
+.my-task-btn {
+    height: 30px;
+    width: 70px;
+    margin-left: 650px;
+}
+
+.create-task-btn {
+    height: 30px;
+    width: 100px;
+    margin-right: 650px;
 }
 
 .body-name {
@@ -90,6 +114,7 @@
 
 .body-name:hover {
     background-color: #45FFCA;
+
 }
 
 .body-second {
@@ -107,7 +132,8 @@
     width: 260px;
     /* background-color: gainsboro; */
     border-radius: 10px;
-    margin: 15px;
+    margin: 35px;
+    margin-left: 10px;
     background-color: #D3F4DC;
     box-shadow: 0px 4px  gray;
 }
