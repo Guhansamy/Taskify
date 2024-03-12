@@ -8,8 +8,9 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Body/> */}
-      <CreateForm/>
+      <Body/>
+      {/* <CreateForm/> */}
+      
     </>
   )
 }

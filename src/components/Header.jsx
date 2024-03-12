@@ -4,12 +4,11 @@ const Header = () => {
 
     return (
         <>
-           {/* <div className="main-header"> */}
-
                 <div className="first-header"> 
                 
                     <div className="first-1"> 
-                        <div>logo</div>
+                        {/* <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="header-logo"/> </div> */}
+                        <div className="header-logo"> D </div>
                     </div>
 
                     <div className="first-2">
@@ -18,7 +17,6 @@ const Header = () => {
                         <div>Profile</div>
                     </div>
                 </div>
-           {/* </div>    */}
         </>
     )
 }

@@ -1,4 +1,4 @@
-
+import "../assets/dharun.css"
 
 export const CreateForm = ()=>{
     const style = {
