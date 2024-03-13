@@ -22,7 +22,7 @@ const Header = () => {
                             </Link>
                         </div>
                         <div>Current</div>
-                        <div>Profile</div>
+                        <div className="profile"><h2 className="D">D</h2></div>
                     </div>
                     
                 </div>
