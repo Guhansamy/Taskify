@@ -40,7 +40,7 @@ const Body = () => {
                 </div>
 
                 <div className="body-third">
-                    <table>
+                    <table className="dataDa">
                         <thead>
                             <th>Title </th>
                             <th>Total Tasks</th>

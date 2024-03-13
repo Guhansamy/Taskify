@@ -10,8 +10,8 @@ const Header = () => {
                     <div className="first-1"> 
                         {/* <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="header-logo"/> </div> */}
                         {/* <div className="header-logo"> D </div> */}
-                        <Link to={'/Body'}>
-                        <img className="header-logo" src="src/assets/logo.png"></img>
+                        <Link to={'/'}>
+                        <img className="header-logo" src="http://localhost:5256/static/logo.png"></img>
                         </Link>
                     </div>
 
