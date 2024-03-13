@@ -17,6 +17,11 @@ const Body = () => {
         console.log("-------------------",dat)
         setData(dat.data)
     }
+    const joinTask=async()=>{
+        const res = await fetch('http://localhost:5256/'+dummy.id+code)
+        const data = await res.json()
+        confirm.log(data)
+    }
     useEffect(()=>{
         fet()
     },[tas])
