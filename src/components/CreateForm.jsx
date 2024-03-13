@@ -1,6 +1,6 @@
 import "../assets/dharun.css"
 import { useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 export const CreateForm = ()=>{
     const form = new FormData()
@@ -99,8 +99,8 @@ export const CreateForm = ()=>{
                         </tr>
                     </table>
                     <div style={style.btn}>
-                        <button onClick={e=>submitHandle()} style={{background:'inherit',border:'0px'}}><h2 style={{color:'white'}}>Submit</h2></button>
-                        
+                        <button onClick={e=>submitHandle()} style={{background:'inherit',border:'0px'}}><h2 style={{color:'white'}}>
+                            <Link to={'/home/'} > Submit </Link></h2></button>                         
                     </div>
                 </div>
             </div>

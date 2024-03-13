@@ -30,7 +30,8 @@ const Taskspage=()=>{
                
                  <div className="top-sidepage">
                     <div className="circle">
-                        <div className="side-logo">{dummy.name.charAt(0)}</div>
+                        <div className="side-logo">{(dummy.name.charAt(0)).toUpperCase()}</div>
+                       { console.log(dummy.name.charAt(0).toUpperCase())}
                     </div>
                     <h3 className="borderbox">{dummy.name}</h3>           
                 </div>
