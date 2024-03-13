@@ -15,7 +15,7 @@ const Header = () => {
                     <div className="first-2">
                         <div>Home</div>
                         <div>Current</div>
-                        <div>Profile</div>
+                        <div className="profile"><h2 className="D">D</h2></div>
                     </div>
                     
                 </div>

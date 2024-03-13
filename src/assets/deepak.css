@@ -97,3 +97,22 @@
     box-shadow: 0 0 10px;
     width:850px;
   }
+
+  .plus-logo{
+    margin-left: 990px;
+    position:absolute;  
+    /* position: fixed; */
+    margin-top: 91%;  
+  }
+
+  .plus{
+    position: fixed;
+    /* position:absolute; */
+    top: 0;
+    width: 80px;
+    margin-top: 41%;
+    margin-left: 2%;
+    
+  }
+
+  
