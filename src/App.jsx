@@ -5,13 +5,15 @@ import {CreateForm} from './components/CreateForm'
 import Taskspage from './components/Taskspage'
 import NewUser from './components/NewUser'
 import Login from './components/Login'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
       <Header />
-      <Body/>
+      <Outlet />
+      {/* <Body/> */}
       {/* <CreateForm/> */}
       {/* <Taskspage/> */}
       {/* <Login/> */}
