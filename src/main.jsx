@@ -14,8 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <App />
 
             <Routes>
-                <Route path='/' element = { <Body />} /> 
-                <Route path="/login" element={<Login/>}/>
+                <Route path='/Body' element = { <Body />} /> 
+                <Route path="/" element={<Login/>}/>
+                {/* <Route path='/each-class/:classId' element = {<} /> */}
             </Routes>
 
     </Router>
