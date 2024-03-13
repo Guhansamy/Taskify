@@ -44,7 +44,7 @@ const NewUser = () => {
         <button className="submit">Submit</button>
         
         <p className="signin">
-          Already have an account? <a href="#">Login</a>
+          Already have an account? <a href="/">Login</a>
         </p>
       </form>
       <img className='pen' src='src/assets/pen.avif'></img>
