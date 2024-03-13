@@ -75,6 +75,9 @@ export const CreateForm = ()=>{
             width:'300px',
             border:'0px',
             padding:'7%'
+        },
+        tdata:{
+            padding:'2%'
         }
     }
     return (
@@ -82,16 +85,16 @@ export const CreateForm = ()=>{
                 <div style={style.inpContainer}>
                     <table className="inp-table">
                         <tr>
-                            <td> <h1>Title</h1></td>
-                            <td><input onChange={(e)=>setTitle(e.target.value)} style={style.inp} type="text" id="title" /></td>
+                            <td style={style.tdata}> <h1>Title</h1></td>
+                            <td style={style.tdata}><input onChange={(e)=>setTitle(e.target.value)} style={style.inp} type="text" id="title" /></td>
                         </tr>
                         <tr>
-                            <td><h1>Description</h1></td>
-                            <td><textarea style={style.txtInp} onChange={e=>setDescription(e.target.value)} name="desc" id="" cols="30" rows="10"></textarea></td>
+                            <td style={style.tdata}><h1>Description</h1></td>
+                            <td style={style.tdata}><textarea style={style.txtInp} onChange={e=>setDescription(e.target.value)} name="desc" id="" cols="30" rows="10"></textarea></td>
                         </tr>
                         <tr>
-                            <td><h1>Upload Files</h1></td>
-                            <td><input name="file" onChange={e=>{Handle(e.target.files)}} style={style.fileInp} type="file" id="" /></td>
+                            <td style={style.tdata}><h1>Upload Files</h1></td>
+                            <td style={style.tdata}><input name="file" onChange={e=>{Handle(e.target.files)}} style={style.fileInp} type="file" id="" /></td>
                         </tr>
                     </table>
                     <div style={style.btn}>

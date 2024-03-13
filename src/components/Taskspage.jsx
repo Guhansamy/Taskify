@@ -1,3 +1,4 @@
+import { Outlet } from "react-router"
 import "../assets/deepak.css"
 import { CreateForm } from "./CreateForm"
 import { TaskList } from "./TaskList"
@@ -21,8 +22,8 @@ const Taskspage=()=>{
                     
                 </div>
             </div>
-
-              <TaskList/>
+                <Outlet/>
+              {/* <TaskList/> */}
               {/* <CreateForm/> */}
               
         </div>

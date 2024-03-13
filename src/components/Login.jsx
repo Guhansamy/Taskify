@@ -33,7 +33,7 @@ const Login=()=>{
                 <div>
                 <button onClick={loginclick} className='btn'><h4>Login</h4></button>
                 <p>Don't have an account? 
-                <a style={{"marginLeft":"20px","textDecoration":"none","margin":"0"}} href='#'> Create one</a></p>
+                <a style={{"marginLeft":"20px","textDecoration":"none","margin":"0"}} href='/signUp'> Create one</a></p>
                 </div>
             </div>
             <div className='full'>
