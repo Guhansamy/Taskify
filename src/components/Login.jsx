@@ -1,16 +1,45 @@
 import { useEffect, useState } from 'react'
 import '../assets/login.css'
+// import { dummy } from './temp'
+import { useNavigate } from 'react-router-dom'
 
+export var dummy = {
+    id:'',
+    name:"",
+    password:"",
+    email:"",
+    joined:[],
+    created:[]
+}
 const Login=()=>{
-    // const [logname,setlogname]=useState(null)
-    // const [logpass,setlogpass]=useState(null)
-
+    const [logname,setlogname]=useState("")
+    const [logpass,setlogpass]=useState("")
+    const navigate = useNavigate();
     // const username=document.getElementById('name').value
     // const password=document.getElementById('pass').value
 
-    const loginclick=()=>{
-        // setlogname(username)
-        // setlogpass(logpass)
+    const loginclick=async()=>{
+        console.log("login intial")
+        const res = await fetch('http://localhost:5256/login',{
+            method:"POST",
+            headers:{
+                'Content-Type':"application/json"
+            },
+            body:JSON.stringify({"username":logname,"password":logpass})
+        })
+        const dat = await res.json()
+        console.log(dat)
+        dummy.id=dat.data.id
+        dummy.name=dat.data.name
+        dummy.password=dat.data.password
+        dummy.created=dat.data.created  
+        dummy.joined=dat.data.joined
+        if(dummy.id!=""){
+            console.log("fine")
+            navigate('/home')
+        }else{
+            console.log('prblm')
+        }
     }
 
     // useEffect(()=>{
@@ -25,10 +54,10 @@ const Login=()=>{
         <div className="loginouter">
             <div className='holder'>
                 <h2 style={{"marginBottom":"10px"}}>Username</h2>
-                <input id='name' className='input' type='text' placeholder='Username'></input>
+                <input id='name' onChange={e=>{setlogname(e.target.value)}} className='input' type='text' placeholder='Username'></input>
 
                 <h2 style={{"marginBottom":"10px"}}>Password</h2>
-                <input id='pass' className='input' type='text' placeholder='Password'></input>
+                <input id='pass' onChange={e=>{setlogpass(e.target.value)}} className='input' type='text' placeholder='Password'></input>
 
                 <div>
                 <button onClick={loginclick} className='btn'><h4>Login</h4></button>

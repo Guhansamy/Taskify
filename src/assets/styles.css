@@ -253,6 +253,34 @@ th:last-child {
   border-radius: 0 10px 10px 0;
 }
 
+.add-class{
+    position: fixed;
+    top: 0;
+    width: 140px;
+    height: 140px;
+    margin-top: 550px;
+    margin-left: 1380px;
+}
+
+.addclassform{
+    margin: 200px auto;
+    margin-left: 32%;
+    box-shadow: 0 0px 2px;
+    padding: 10px;
+    width: 600px;
+    height: 400px;
+}
+
+.addclassform  label{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.addclassform1{
+    margin-top: 80px;
+    margin-left: 120px;
+}
+
 .dataDa td > button {
     border-radius: 5px;
     height: 25px;
