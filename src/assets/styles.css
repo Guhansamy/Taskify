@@ -1,5 +1,11 @@
 /* colour = rgb(132, 234, 180) */
 
+* a{
+    text-decoration: none;
+    text-decoration-color: black;
+    color: black;
+}
+
 .first-header {
     display: flex;
     flex-direction: row;
