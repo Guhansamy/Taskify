@@ -3,10 +3,10 @@ export const TaskCompo = (props)=>{
     return (
         <>
             <tr>
-                <td className="dataDa"> {props.title} </td>
-                <td className="dataDa"> {props.tas} </td>
-                <td className="dataDa"> {props.mem} </td>
-                <td className="dataDa"> {props.desc} </td> 
+                <td> {props.title} </td>
+                <td> {props.tas} </td>
+                <td> {props.mem} </td>
+                <td> {props.desc} </td> 
             </tr>
         </>
     )

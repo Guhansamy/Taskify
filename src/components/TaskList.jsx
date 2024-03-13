@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Addtask from "./Addtask"
+// import book1 from "src/assets/book1.png"
+
 
 const task=[{
     "taskname":"Assignment1",
@@ -19,7 +21,7 @@ export const TaskList =()=>{
         <div className="rightside">
                 <div className="titlecard">
                     <h1 style={{"marginLeft":"60px","marginTop":"60px"}}> Discrete Mathematics</h1>
-                    <img style={{"width":"290px","marginLeft":"600px","marginTop":"-120px"}} src="./src/assets/book1.png"></img>
+                    <img style={{"width":"290px","marginLeft":"600px","marginTop":"-120px"}} src="http://localhost:5256/static/bk.png"></img>
                 </div>
                 <div className="plus-logo">
                 <a href="#">

@@ -3,7 +3,8 @@ import "../assets/deepak.css"
 import { CreateForm } from "./CreateForm"
 import { TaskList } from "./TaskList"
 
-const Taskspage=()=>{
+const Taskspage=(props)=>{
+
     return (
         <>
         <div className="whole">

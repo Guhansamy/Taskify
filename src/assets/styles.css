@@ -211,17 +211,17 @@
     margin-top: 20px;
 }
 
-table {
+.dataDa{
     border-collapse: separate;
     border-spacing: 0 35px;
     width: 1300px;
   }
-th{
+.dataDa th{
     font-weight: bold;
     font-size: 1.3rem;
 }
 
-thead {
+.dataDa thead{
     padding-bottom  : 40%;
 }
 
@@ -233,27 +233,27 @@ thead {
 } 
 
 
-tr {
+.dataDa tr {
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(80, 194, 163);
     /* background-color: rgb(199, 236, 221); */
 }
 
-tr:nth-child(2):after{
+.dataDa tr:nth-child(2):after{
     border-radius: 10px;
 }
 
-td:first-child,
+.dataDa td:first-child,
 th:first-child {
   border-radius: 10px 0 0 10px;
 }
 
-td:last-child,
+.dataDa td:last-child,
 th:last-child {
   border-radius: 0 10px 10px 0;
 }
 
-td > button {
+.dataDa td > button {
     border-radius: 5px;
     height: 25px;
     width: 85px;
