@@ -48,11 +48,9 @@ const Body = () => {
                             <th>Description </th>
                         </thead>
                         <tbody>
-                            {data.map((e)=>{
-                                <Link to={'#'}>
-                                    return (<TaskCompo title={e.title} desc={e.description} tas={e.tasks.length} mem={e.members.length}/>)
-                                </Link>
-                            })}
+                            {data.map((e)=>
+                                    <TaskCompo id={e._id} title={e.title} desc={e.description} tas={e.tasks.length} mem={e.members.length}/>
+                            )}
                         </tbody>
 
                     </table>

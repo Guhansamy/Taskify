@@ -1,9 +1,10 @@
 import "../assets/dharun.css"
 import { useState } from "react"
-
+import { useParams } from "react-router-dom"
 
 export const CreateForm = ()=>{
     const form = new FormData()
+    const {id} = useParams();
     const [title,setTitle] = useState("")
     const [description,setDescription] = useState("")
     const Handle =(fils)=>{
@@ -13,7 +14,7 @@ export const CreateForm = ()=>{
     const submitHandle = async()=>{
         form.append('title',title)
         form.append('desc',description)
-        const response = await fetch('http://localhost:8000/api-upload',{
+        const response = await fetch('http://localhost:5256/create-task/'+id,{
             method : 'POST',
             body : form
         })
