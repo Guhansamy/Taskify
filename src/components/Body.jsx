@@ -3,10 +3,13 @@ import "../assets/styles.css"
 import { TaskCompo } from "./TaskCompo";
 import { Link } from "react-router-dom";
 import {dummy} from './temp'
+import Join from "./Join";
 
 const Body = () => {
     const[data,setData]=useState([])
     const[tas,setTas]=useState(0)
+    const [join,setjoin]=useState(0)
+    const [code,setCode]=useState('')
     const fet = async()=>{
         console.log(tas)
         const response = await fetch(`http://localhost:5256/get-class/${dummy.id}/${tas}`)
@@ -25,9 +28,16 @@ const Body = () => {
                     <div className="body-name">
                         Hey Deepak you have <span> 15 </span> task remaining
                     </div>
-                    <div>
-                        <button className="body-join-button" > Join Task</button>
-                    </div>
+                    <div style={{"display":"flex","margin-right":"50px"}}>
+                        {(join==1)?<Join fun={setCode}/>:<></>}
+                        <button onClick={()=>{
+                            setjoin(!join);
+                            if(join==1){
+                                joinTask()
+                            }
+                        }} style={{"margin-left":"40px","height":"40px","margin-top":"14px"}} className="body-join-button"> Join Task</button>
+
+                    </div>
                 </div>
 
                 <div className="body-middle">
