@@ -2,18 +2,21 @@ import { useEffect, useState } from "react";
 import "../assets/styles.css"
 import { TaskCompo } from "./TaskCompo";
 import { Link } from "react-router-dom";
+import {dummy} from './temp'
 
 const Body = () => {
     const[data,setData]=useState([])
+    const[tas,setTas]=useState(0)
     const fet = async()=>{
-        const response = await fetch("http://localhost:5256/get-class")
+        console.log(tas)
+        const response = await fetch(`http://localhost:5256/get-class/${dummy.id}/${tas}`)
         const dat = await response.json()
-        console.log(dat)
-        setData(dat)
+        console.log("-------------------",dat)
+        setData(dat.data)
     }
     useEffect(()=>{
         fet()
-    },[])
+    },[tas])
     return (
         <>
             <div className="body-main">
@@ -29,10 +32,10 @@ const Body = () => {
 
                 <div className="body-middle">
                     <div>
-                        <button className="my-task-btn"> My Task</button>
+                        <button onClick={()=>{setTas(0)}} className="my-task-btn" style={{background:(tas)? "rgb(205, 211, 210)":"rgb(82, 212, 177)"}}> My Task</button>
                     </div>
                     <div>
-                        <button className="create-task-btn"> Created Task </button>
+                        <button onClick={()=>{setTas(1)}} className="create-task-btn" style={{background:(!tas)? "rgb(205, 211, 210)":"rgb(82, 212, 177)"}}> Created Task </button>
                     </div>
                 </div>
 
