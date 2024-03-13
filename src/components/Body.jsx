@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react";
 import "../assets/styles.css"
+import { TaskCompo } from "./TaskCompo";
 
 const Body = () => {
+    const[data,setData]=useState([])
+    const fet = async()=>{
+        const response = await fetch("http://localhost:5256/get-class")
+        const dat = await response.json()
+        console.log(dat)
+        setData(dat)
+    }
+    useEffect(()=>{
+        fet()
+    },[])
     return (
         <>
             <div className="body-main">
@@ -27,32 +39,14 @@ const Body = () => {
                     <table>
                         <thead>
                             <th>Title </th>
-                            <th>Status </th>
-                            <th>Task </th>
+                            <th>Total Tasks</th>
                             <th>Participants </th>
+                            <th>Description </th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td> Deepa </td>
-                                <td> <button> Completed </button> </td>
-                                <td> 5 </td>
-                                <td> 32 </td>
-                            </tr>
-
-                            <tr>
-                                <td> Deepa </td>
-                                <td> <button> Completed </button> </td>
-                                <td> 5 </td>
-                                <td> 32 </td>
-                            </tr>
-
-                            <tr>
-                                <td> Deepa </td>
-                                <td> <button> Completed </button> </td>
-                                <td> 5 </td>
-                                <td> 32 </td>
-                            </tr>
-
+                            {data.map((e)=>{
+                                return (<TaskCompo title={e.title} desc={e.description} tas={e.tasks.length} mem={e.members.length}/>)
+                            })}
                         </tbody>
 
                     </table>
