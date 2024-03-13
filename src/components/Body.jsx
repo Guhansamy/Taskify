@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/styles.css"
 import { TaskCompo } from "./TaskCompo";
+import { Link } from "react-router-dom";
 import {dummy} from './temp'
 
 const Body = () => {
@@ -48,7 +49,9 @@ const Body = () => {
                         </thead>
                         <tbody>
                             {data.map((e)=>{
-                                return (<TaskCompo title={e.title} desc={e.description} tas={e.tasks.length} mem={e.members.length}/>)
+                                <Link to={'#'}>
+                                    return (<TaskCompo title={e.title} desc={e.description} tas={e.tasks.length} mem={e.members.length}/>)
+                                </Link>
                             })}
                         </tbody>
 

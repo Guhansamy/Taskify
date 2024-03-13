@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const TaskCompo = (props)=>{
     console.log(props)
     return (

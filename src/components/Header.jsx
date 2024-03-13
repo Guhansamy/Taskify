@@ -17,7 +17,7 @@ const Header = () => {
 
                     <div className="first-2">
                         <div>
-                            <Link to={'/'}>
+                            <Link to={'/Body'}>
                                 Home
                             </Link>
                         </div>
