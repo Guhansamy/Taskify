@@ -23,98 +23,40 @@ const Body = () => {
                     </div>
                 </div>
 
-                <div className="body-second"> 
+                <div className="body-third">
+                    <table>
+                        <thead>
+                            <th>Title </th>
+                            <th>Status </th>
+                            <th>Task </th>
+                            <th>Participants </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Deepa </td>
+                                <td> <button> Completed </button> </td>
+                                <td> 5 </td>
+                                <td> 32 </td>
+                            </tr>
 
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
+                            <tr>
+                                <td> Deepa </td>
+                                <td> <button> Completed </button> </td>
+                                <td> 5 </td>
+                                <td> 32 </td>
+                            </tr>
 
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
+                            <tr>
+                                <td> Deepa </td>
+                                <td> <button> Completed </button> </td>
+                                <td> 5 </td>
+                                <td> 32 </td>
+                            </tr>
 
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
+                        </tbody>
 
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
-
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
-
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
-
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
-
-                    <div className="square-1">
-                        <div className="square-circle"> </div>
-                        <div className="square-assign">
-                            <span> Test</span>
-                        </div>
-                        <div className="square-par">
-                            <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="par-img"/>  </div>
-                            <div className="par-num"> 56 </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
+                    </table>
+                 </div> 
 
             </div>
         </>
