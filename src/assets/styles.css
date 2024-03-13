@@ -1,24 +1,16 @@
 /* colour = rgb(132, 234, 180) */
 
-.main-header {
-    display: flex;
-    flex-direction: column;
-    background-color: aqua;
-    position: absolute;
-    top:0px;
-    /* z-index: 1000; */
-}
-
 .first-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(203, 203, 214);
+    background-color: white;
     height: 80px;
     width: 100%;
     position: fixed;
     top:0px;
+    box-shadow: 0 0 7px rgb(94, 91, 91) ;
 }
 
  .first-1 {
@@ -42,15 +34,7 @@
 }
 
 .header-logo{
-    display: flex;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
-    background-color: #45FFCA;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-weight: bold;
+    width: 300px;
 
 }
 
@@ -92,8 +76,8 @@
 }
 
 .body-join-button:hover{
-    height: 33px;
-    color: rgb(237, 248, 174);
+    /* height: 33px; */
+    background-color: rgb(32, 164, 83);
     /* background: linear-gradient(to left, red, #45FFCA); */
 }
 
@@ -107,21 +91,27 @@
 }
 
 .my-task-btn {
-    height: 30px;
-    width: 70px;
+    height: 41px;
+    width: 100px;
     margin-left: 650px;
     border-radius: 10px;
     border: none;
     font-size: 15px;
+    padding: 5px;
 }
 
 .create-task-btn {
-    height: 30px;
+    height: 41px;
     width: 100px;
     margin-right: 650px;
     border-radius: 10px;
     border: none;
     font-size: 15px;
+    padding: 5px;
+}
+
+.create-task-btn:hover,.my-task-btn:hover{
+    background-color: rgb(82, 212, 177);
 }
 
 .body-name {

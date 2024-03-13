@@ -2,20 +2,20 @@ import { useEffect, useState } from 'react'
 import '../assets/login.css'
 
 const Login=()=>{
-    const [logname,setlogname]=useState(null)
-    const [logpass,setlogpass]=useState(null)
+    // const [logname,setlogname]=useState(null)
+    // const [logpass,setlogpass]=useState(null)
 
-    const username=document.getElementById('name').value
-    const password=document.getElementById('pass').value
+    // const username=document.getElementById('name').value
+    // const password=document.getElementById('pass').value
 
     const loginclick=()=>{
-        setlogname(username)
-        setlogpass(logpass)
+        // setlogname(username)
+        // setlogpass(logpass)
     }
 
-    useEffect(()=>{
-        fetch('')
-    },[logname,logpass])
+    // useEffect(()=>{
+    //     fetch('')
+    // },[logname,logpass])
 
     return (
         <>

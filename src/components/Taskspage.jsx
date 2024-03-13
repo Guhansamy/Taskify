@@ -22,8 +22,8 @@ const Taskspage=()=>{
                 </div>
             </div>
 
-              {/* <TaskList/> */}
-              <CreateForm/>
+              <TaskList/>
+              {/* <CreateForm/> */}
               
         </div>
         </>

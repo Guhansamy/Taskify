@@ -7,7 +7,7 @@ const Body = () => {
 
                 <div className="body-first"> 
                     <div className="body-name">
-                        Hey Deepa you have <span> 15 </span> task remaining
+                        Hey Deepak you have <span> 15 </span> task remaining
                     </div>
                     <div>
                         <button className="body-join-button" > Join Task</button>

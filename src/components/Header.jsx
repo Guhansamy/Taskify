@@ -8,7 +8,8 @@ const Header = () => {
                 
                     <div className="first-1"> 
                         {/* <div> <img src="https://cdn-icons-png.flaticon.com/128/14607/14607522.png" className="header-logo"/> </div> */}
-                        <div className="header-logo"> D </div>
+                        {/* <div className="header-logo"> D </div> */}
+                        <img className="header-logo" src="src/assets/logo.png"></img>
                     </div>
 
                     <div className="first-2">
@@ -16,6 +17,7 @@ const Header = () => {
                         <div>Current</div>
                         <div>Profile</div>
                     </div>
+                    
                 </div>
         </>
     )

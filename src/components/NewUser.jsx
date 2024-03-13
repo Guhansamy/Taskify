@@ -2,9 +2,10 @@ import '../assets/signstyles.css';
 
 const NewUser = () => {
     return ( 
+      <>
         <form className="form">
         <p className="title">Register</p>
-        <p className="message">Signup now.</p>
+        {/* <p className="message">Signup now.</p> */}
         {/* <div className="flex"> */}
           {/* <label>
             <input className="input" type="text" placeholder="" required="" />
@@ -43,9 +44,11 @@ const NewUser = () => {
         <button className="submit">Submit</button>
         
         <p className="signin">
-          Already have an account? <a href="#">Login in</a>
+          Already have an account? <a href="#">Login</a>
         </p>
       </form>
+      <img className='pen' src='src/assets/pen.avif'></img>
+      </>
     )
 }
 

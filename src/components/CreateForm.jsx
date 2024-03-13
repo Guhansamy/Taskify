@@ -1,4 +1,6 @@
 import "../assets/dharun.css"
+import { useState } from "react"
+
 
 export const CreateForm = ()=>{
     const form = new FormData()
@@ -23,7 +25,8 @@ export const CreateForm = ()=>{
             width:'75%',
             height:'100%',
             padding:'0% 0px',
-            marginLeft:'20%'
+            marginLeft:'20%',
+            marginTop:'10%'
         },
         profileContainer:{
             height:'175px',
@@ -46,8 +49,10 @@ export const CreateForm = ()=>{
             borderRadius:'20px',
             padding:'0px 15px',
             margin:'0px 0px',
+            padding:'10px',
             background:'rgb(80, 194, 163)',
-            
+            width:"100px",
+            textAlign:"center"            
         },
         inp:{
             height:'45px',
@@ -66,7 +71,7 @@ export const CreateForm = ()=>{
             padding:'5px'
         },
         fileInp:{
-            height:'45px',
+            height:'49px',
             width:'300px',
             border:'0px',
             padding:'7%'
