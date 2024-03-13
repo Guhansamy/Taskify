@@ -24,7 +24,7 @@ export const TaskList =()=>{
                         <>
                             <div className="titlecard">
                                 <h1 style={{"marginLeft":"60px","marginTop":"60px"}}> {dummy_title} </h1>
-                                <img style={{"width":"290px","marginLeft":"600px","marginTop":"-120px"}} src="./src/assets/book1.png"></img>
+                                <img style={{"width":"290px","marginLeft":"600px","marginTop":"-120px"}} src="http://localhost:5256/static/bk.png"></img>
                                 </div>
                                 <div className="plus-logo">
                                 <a href={`/home/task/${id}/form`}>
