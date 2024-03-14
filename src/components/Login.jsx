@@ -29,11 +29,6 @@ const Login=()=>{
         })
         const dat = await res.json()
         console.log(dat)
-        // dummy.id=dat.data.id
-        // dummy.name=dat.data.name
-        // dummy.password=dat.data.password
-        // dummy.created=dat.data.created  
-        // dummy.joined=dat.data.joined
         if(dat.data[0]._id!=false){
             console.log("fine")
             navigate('/home/'+dat.data[0]._id)
