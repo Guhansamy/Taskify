@@ -259,6 +259,14 @@ th:last-child {
   border-radius: 0 10px 10px 0;
 }
 
+.dataDa td > button {
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    border: none;
+    background-color: white;
+}
+
 .add-class{
     position: fixed;
     top: 0;
@@ -267,19 +275,22 @@ th:last-child {
     margin-top: 550px;
     margin-left: 1380px;
 }
-
 .addclassform{
     margin: 200px auto;
-    margin-left: 32%;
+    margin-left: 55%;
     box-shadow: 0 0px 2px;
     padding: 10px;
     width: 600px;
     height: 400px;
+    box-shadow: 0 0 5px #376055;
+    background-color: #6eb9b0;
+    margin-top: -400px;
 }
 
 .addclassform  label{
     display: flex;
     margin-bottom: 40px;
+    font-size: 28px;
 }
 
 .addclassform1{
@@ -287,10 +298,11 @@ th:last-child {
     margin-left: 120px;
 }
 
-.dataDa td > button {
-    border-radius: 5px;
-    height: 25px;
-    width: 85px;
-    border: none;
-    background-color: white;
+.addclasspic{
+    margin-top: 150px;
+    width: 800px;
+}
+
+.addclassbtn:hover{
+    background-color: #45FFCA;
 }
