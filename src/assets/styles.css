@@ -270,10 +270,10 @@ th:last-child {
 .add-class{
     position: fixed;
     top: 0;
-    width: 140px;
-    height: 140px;
-    margin-top: 550px;
-    margin-left: 1380px;
+    width: 80px;
+    height: 80px;
+    margin-top: 600px;
+    margin-left: 1450px;
 }
 .addclassform{
     margin: 200px auto;

@@ -36,7 +36,7 @@ export const TaskList =()=>{
                                     </a>
                                 </div>:<></> }
                                 <div className="tasklist">                                    
-                                    {
+                                    {(datta.length==0)?<h1>No tasks are uploaded yet...</h1>:
                                         datta.map(yy => {
                                             return (
                                                 <Addtask title = {yy.title} description = {yy.desc} file = {yy.file}/>
