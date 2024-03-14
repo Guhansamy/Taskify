@@ -7,22 +7,35 @@ import { dummy } from "./temp"
 import { useParams } from "react-router-dom"
 
 const Taskspage=()=>{
-    const {id} = useParams();
+    const {id,uid} = useParams();
     console.log(id)
     const[clscode , setClsCode] = useState()
     const[membrs , setMembrs] = useState()
+    const[dummy,setDummy]=useState()
 
     const fet = async () => {
         const url=`http://localhost:5256/get-cls-code/${id}`
 
         const response = await fetch(url)
         const data = await response.json()
-        console.log(data.values," hello")
+        console.log(data.values," hello da")
         setClsCode(data.values)
         setMembrs(data.siz)
+
+        const res = await fetch(`http://localhost:5256/get-user/${uid}`)
+        const dat = await res.json()
+        setDummy(dat)
+        console.log(dat)
     }
 
     useEffect(() => {fet()},[])
+    if(!dummy){
+        return(
+            <>
+                <span>Loading...</span>
+            </>
+        )
+    }
     return (
         <>
         <div className="whole">

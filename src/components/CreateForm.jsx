@@ -1,10 +1,11 @@
 import "../assets/dharun.css"
 import { useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 
 export const CreateForm = ()=>{
+    const nav = useNavigate()
     const form = new FormData()
-    const {id} = useParams();
+    const {id,uid} = useParams();
     const [title,setTitle] = useState("")
     const [description,setDescription] = useState("")
     const Handle =(fils)=>{
@@ -20,6 +21,7 @@ export const CreateForm = ()=>{
         })
         const data = await response.json()
         console.log(data)
+        nav('/home/'+uid+'/task/'+id)
     }
     const style = {
         rightContainer:{

@@ -11,6 +11,7 @@ import { TaskList } from './components/TaskList.jsx'
 import Taskspage from './components/Taskspage.jsx'
 import { TaskCompo } from './components/TaskCompo.jsx'
 import { CreateForm } from './components/CreateForm.jsx'
+import Addclass from './components/AddClass.jsx'
 
 const Router = createBrowserRouter([
     {
@@ -22,23 +23,27 @@ const Router = createBrowserRouter([
         element:<NewUser/>
     },
     {
-        path:'/home',
+        path:'/home/:uid',
         element:<App/>,
         children:[
             {
-                path:'/home/',
+                path:'/home/:uid/',
                 element:<Body/>
             },
             {
-                path:'/home/task/:id',
+                path:'/home/:uid/create-cls',
+                element:<Addclass/>
+            },
+            {
+                path:'/home/:uid/task/:id',
                 element:<Taskspage/>,
                 children:[
                     {
-                        path:'/home/task/:id/',
+                        path:'/home/:uid/task/:id/',
                         element:<TaskList/>
                     },
                     {
-                        path:'/home/task/:id/form',
+                        path:'/home/:uid/task/:id/form',
                         element:<CreateForm/>
                     }
                 ]

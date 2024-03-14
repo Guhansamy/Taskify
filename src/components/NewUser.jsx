@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../assets/signstyles.css';
-import { createRoutesFromChildren } from 'react-router-dom';
+import { Link, createRoutesFromChildren, useNavigate } from 'react-router-dom';
 
 const NewUser = () => {
 
@@ -8,7 +8,7 @@ const NewUser = () => {
   const[emails,setEmails] = useState();
   const[passwords , setPasswords] = useState();
   const[conpas,setConpas] = useState();
-
+const navigate = useNavigate()
   const handleValues = async () => {
 
       try {
@@ -24,7 +24,9 @@ const NewUser = () => {
               email : emails
             })
           })
+          const dat= await response.json()
           console.log("Perfect Signin and everything are up to date")
+          navigate('/')
         }
         else{
           console.log("Password is not same")
@@ -58,7 +60,7 @@ const NewUser = () => {
           <span>Confirm password</span>
         </label>
         
-        <button className="submit" onClick={e => handleValues()}>Submit</button>
+        <button className="submit" onClick={e => {e.preventDefault();handleValues()}}>Submit</button>
         
         <p className="signin">
           Already have an account? <a href="/">Login</a>
@@ -70,4 +72,3 @@ const NewUser = () => {
 }
 
 export default NewUser
-
